@@ -2,7 +2,7 @@ CC = g++
 CPPFLAGS = -Wall -Wextra -std=c++0x
 
 
-all: Chaine.o Personne.o Etudiant.o Programme.o
+all: Chaine.o Personne.o Etudiant.o Enseignant.o Programme.o test
 
 Chaine.o: Chaine.hpp
 
@@ -12,7 +12,12 @@ Programme.o: Personne.hpp
 
 Etudiant.o: Etudiant.hpp
 
-test: Chaine.o Personne.o Etudiant.o Programme.o
+Enseignant.o: Enseignant.hpp
+
+EleveVacataire.o:  EleveVacataire.hpp	
+
+test: Chaine.o Personne.o Etudiant.o Enseignant.o EleveVacataire.o Programme.o
 	$(CC) $^ -o $@
+
 clean:
 	rm *.o test
