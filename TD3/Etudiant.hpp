@@ -6,7 +6,7 @@
 
 namespace enseirb{
 
-  class Etudiant: public Personne{
+  class Etudiant: public virtual Personne{
   private:
     Chaine _filiere;
     Chaine _enseignement;
@@ -18,6 +18,7 @@ namespace enseirb{
     
     Chaine filiere() const;
     Chaine enseignement() const;
+    Chaine nom()const;
     void setEnseignement(const Chaine &);
 
     ~Etudiant(){}

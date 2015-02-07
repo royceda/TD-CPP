@@ -20,7 +20,7 @@ namespace enseirb{
 
     int nbHeure()const;
     const Chaine service()const;
-    const Chaine nom();
+    const Chaine nom()const;
 
 
     ~Enseignant(){};

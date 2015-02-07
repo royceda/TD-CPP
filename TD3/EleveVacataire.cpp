@@ -1,10 +1,7 @@
 #include "EleveVacataire.hpp"
 
 
-
 namespace enseirb{
-  
-  static Chaine g("EleveVacataire: ");
   
   EleveVacataire::EleveVacataire():
     Personne(""), Etudiant(), Enseignant(){
@@ -14,7 +11,7 @@ namespace enseirb{
      Personne(nom), Etudiant(nom, fil, ens), Enseignant(nom, service, n){
      printf("%s (%d): %s\n", __FILE__,__LINE__,__func__);}
 
-  const Chaine EleveVacataire::nom(){
-      return g + Personne::nom();
+  const Chaine EleveVacataire::nom()const{
+    return Etudiant::nom() + Enseignant::nom();
     }
 }

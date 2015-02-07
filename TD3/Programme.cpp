@@ -1,4 +1,5 @@
 #include <iostream>
+
 #include "Chaine.hpp"
 #include "Etudiant.hpp"
 #include "Enseignant.hpp"
@@ -21,14 +22,12 @@ void affiche(const Chaine &s){
   std::cout << ">" << std::endl;
 }
 
-
 void afficheNom(const Personne &p){
   affiche(p.nom());
 }
 
 
-
-void main1(){
+void test1(){
   Chaine s("un texte long");
   Chaine p("test");
   
@@ -39,8 +38,8 @@ void main1(){
 }
 
 
-int main(){
-  Chaine a("royce");
+void test2(){
+ Chaine a("royce");
   Chaine b("info");
   Chaine c("cpp");
 
@@ -58,6 +57,10 @@ int main(){
   EleveVacataire Blah(a, b, c, e, 6);
   affiche(Blah.nom());
   affiche(Blah.nom());
+}
+
+int main(){
+ 
 
   return 0;
 }

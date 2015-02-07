@@ -3,6 +3,8 @@
 
 namespace enseirb{
 
+  static Chaine g("Etudiant");
+
   Etudiant::Etudiant():
     Personne(""), _filiere(""), _enseignement(""){
     printf("%s (%d): %s\n", __FILE__,__LINE__,__func__);}
@@ -15,6 +17,12 @@ namespace enseirb{
     Personne(a), _filiere(b), _enseignement(c){
     printf("%s (%d): %s\n", __FILE__,__LINE__,__func__);}
 
+
+
+  Chaine Etudiant::nom()const{
+
+    return g + Personne::nom();
+  }
 
 
   Chaine Etudiant::filiere() const{

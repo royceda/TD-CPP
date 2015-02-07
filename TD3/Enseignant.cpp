@@ -26,7 +26,7 @@ namespace enseirb{
     return _service;
   }
 
-  const Chaine Enseignant::nom(){
+  const Chaine Enseignant::nom()const{
     return g + Personne::nom();
   }
 }
