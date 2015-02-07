@@ -1,7 +1,6 @@
 CC = g++
 CPPFLAGS = -Wall -Wextra -std=c++0x
 
-
 all: test  SmartExample
 
 Chaine.o: Chaine.hpp
@@ -26,7 +25,6 @@ test: Chaine.o Personne.o Etudiant.o Enseignant.o EleveVacataire.o Programme.o
 
 SmartExample: SmartExample.o SmartPointer.o
 	$(CC) $^ -o $@
-
 
 clean:
 	rm *.o test SmartExample

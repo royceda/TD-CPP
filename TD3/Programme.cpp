@@ -39,7 +39,7 @@ void test1(){
 
 
 void test2(){
- Chaine a("royce");
+  Chaine a("royce");
   Chaine b("info");
   Chaine c("cpp");
 

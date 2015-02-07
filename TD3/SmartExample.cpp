@@ -12,12 +12,10 @@ int main(){
   SmartPointer p(new char[10]);
 
   std::strcpy(p, "coucou");
-  
+
   std::printf("conversion %s\n", (const char *) p);
   std::printf("conversion %c\n", ((const char*) p)[1]);
-
   std::printf("get %s\n", p.get());
-
   std::printf("operateur* %c\n", *p);
   
   std::strcpy(p.get(), "BYE");

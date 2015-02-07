@@ -34,7 +34,12 @@ namespace enseirb {
     R_TRACE(std::endl);
   }
   
-  SmartPointer::SmartPointer(char *data): _data(data), _counter(new int(1)) {
+
+  SmartPointer::SmartPointer(): _counter(new int(0)){
+    char *_donnees = new char[0];
+  }
+
+  SmartPointer::SmartPointer(const char *data): _data(data), _counter(new int(1)) {
     TRACE(__func__ << "(char*) " << _data << std::endl);
   }
   
@@ -57,7 +62,9 @@ namespace enseirb {
   const SmartPointer &SmartPointer::operator=(const SmartPointer &p) {
     TRACE(__func__ << ':' << p._data);
     //std::cerr << __func__ << ':' << p._data;     
-    if ((this==&p)||(this->_data==p._data)) return *this;
+    if ((this==&p)||(this->_data==p._data)) 
+      return *this;
+    
     releasePointer();
     _counter = p._counter;
     *_counter = *_counter + 1;
