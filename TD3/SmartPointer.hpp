@@ -4,11 +4,11 @@
 namespace enseirb{  
 
   class SmartPointer{
+  private:
     char *_data;
-    int *_counter;
+    int  *_counter;
     
     void releasePointer();
-
     const SmartPointer &operator=(char *data);
     
   public:
@@ -19,8 +19,8 @@ namespace enseirb{
     ~SmartPointer();
 
     char *operator->();
-    const char *operator->()const ;
     char &operator*();
+    const char *operator->()const ;
     const char &operator*()const;
 
     const SmartPointer &operator=(const SmartPointer &p);
@@ -29,7 +29,7 @@ namespace enseirb{
     operator const char *() const ;
 
     const char * get() const;
-     char * get() ;
+    char * get() ;
   };
 }
 

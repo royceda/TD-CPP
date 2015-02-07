@@ -2,7 +2,7 @@ CC = g++
 CPPFLAGS = -Wall -Wextra -std=c++0x
 
 
-all: Chaine.o Personne.o Etudiant.o Enseignant.o Programme.o test
+all: test  SmartExample
 
 Chaine.o: Chaine.hpp
 
