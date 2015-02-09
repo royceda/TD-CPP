@@ -22,7 +22,7 @@ namespace enseirb {
   Chaine::Chaine(const char *s) {
     // Cas s==NULL a gerer plus tard.  
     _donnees = copie(s);
-    _taille = strlen(s);
+    _taille  = strlen(s);
     // SmartPointer _donnees(s);
   }
   
@@ -65,9 +65,10 @@ namespace enseirb {
     if (0 == tailleTmp)
       return *this;
 
-    const char *tmp(_donnees.get());
-    strcat(tmp, c._donnees.get());
-    
+    const char *tmp((const char*)_donnees);
+    const char *tmp1((const char*)c._donnees);
+    //strcat(tmp, tmp1);
+
     return Chaine(tmp);
 
     /*
