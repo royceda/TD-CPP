@@ -5,12 +5,15 @@
 
 namespace enseirb{
   
-  class CurseurClassique: public Curseur{
+  class CurseurPas: public Curseur{
   private:
-    
+    unsigned int begin;
+    unsigned int end;
+    unsigned int pas;
+
   public:
     
-    CurseurClassique(Chaine &);
+    CurseurPas(Chaine &a, int b, int e, int p);
 
 
     void operator++ () ;
@@ -23,7 +26,7 @@ namespace enseirb{
    
   
     
-    ~CurseurClassique() {};
+    ~CurseurPas() {};
 
   };
 }

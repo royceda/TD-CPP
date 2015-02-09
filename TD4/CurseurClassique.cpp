@@ -3,8 +3,8 @@
 
 namespace enseirb{
 
-  CurseurClassique::CurseurClassique(Chaine &a, int b):
-    Curseur(a, b){}
+  CurseurClassique::CurseurClassique(Chaine &a):
+    Curseur(a){}
 
 
   void CurseurClassique::operator++(){
