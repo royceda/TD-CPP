@@ -24,6 +24,7 @@ if( i == 0)
 std::cout<< c << std::endl;
 }
 }
+  ~Point(){};
 
 	    };
 }
