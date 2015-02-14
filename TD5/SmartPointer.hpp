@@ -5,29 +5,74 @@
 
 namespace enseirb{  
 
+  template<class DataType>
+  
   class SmartPointer{
-    int *data;
+    DataType *data;
     int *counter;
     
-    void releasePointer();
+    void releasePointer(){
+      *counter = *counter-1;
+      if (*counter==0)
+	{
+	  delete counter;
+	  delete data;
+	}
+      counter=NULL;
+    }
     
   public:
-    SmartPointer(int *data);
+    SmartPointer(DataType *data):data(data), counter(new int(1)){}
     
-    SmartPointer(const SmartPointer &p);
+    SmartPointer(const SmartPointer &p):data(p.data),counter(p.counter){
+    *counter=*counter+1;
+  }
 
-    ~SmartPointer();
+    ~SmartPointer(){
+      releasePointer();
+    }
 
-    int *operator->();
-    const int *operator->()const ;
-    int &operator*();
-    const int &operator*()const;
+    DataType *operator->(){
+      releasePointer();
+    }
+
+    const DataType *operator->()const {
+      return data;
+    }
+
+    DataType &operator*(){
+      return *data;
+    }
+
+    const DataType &operator*()const{
+      return *data;
+    }
     
-    const SmartPointer &operator=(const SmartPointer &p);
+    const SmartPointer &operator=(const SmartPointer &p){
+      if ((this==&p)||(this->data==p.data))
+	return *this;
+      releasePointer();
+      counter=p.counter;
+      *counter=*counter+1;
+      data=p.data;
+      return *this;
+    }
 
-    const SmartPointer &operator=(int *data);
-    operator int *();
-    operator const int *() const ;
+    const SmartPointer &operator=(DataType *data){
+      releasePointer();
+      counter=new int(1);
+      this->data=data;
+      return *this;
+    }
+
+
+    operator DataType *(){
+      return data;
+    }
+
+    operator const DataType *() const {
+      return data;
+    }
   };
 }
 
