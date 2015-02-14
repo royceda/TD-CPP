@@ -5,7 +5,7 @@ namespace enseirb{
 
   CurseurPas::CurseurPas(Chaine &a, int b, int e, int p):
     Curseur(a), begin(b), end(e), pas(p) {
-    _position = 0;
+    _position = begin;
   }
 
 
@@ -16,7 +16,7 @@ namespace enseirb{
 
   void CurseurPas::operator--(){
     if(_position > 0)
-    _position--;
+      _position--;
   }
 
   bool CurseurPas::fini(){
@@ -31,6 +31,6 @@ namespace enseirb{
   }
   
   void CurseurPas::fin(){
-    _position = _chaine.taille();
+    _position = end;
   }
 }

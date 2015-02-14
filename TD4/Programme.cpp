@@ -5,9 +5,13 @@
 #include "Chaine.hpp"
 #include "CurseurClassique.hpp"
 #include "CurseurInverse.hpp"
+#include "CurseurPas.hpp"
+
 
 using enseirb::CurseurClassique;
 using enseirb::CurseurInverse;
+using enseirb::CurseurPas;
+
 
 void affiche(const Chaine &s){
   std::puts("affiche:");
@@ -15,7 +19,6 @@ void affiche(const Chaine &s){
     std::putchar(s[i]);
   std::puts("");
 }
-
 
 
 void main1(){
@@ -65,7 +68,17 @@ int main(int argc, char **argv){
   std::cout<< "Curseur Inverse:\t OK" << std::endl;
 
 
-
+  CurseurPas CP(s, 1, 8, 2);
+  assert( *CP == 'e');
+  ++CP; ++CP;  
+  assert( *CP == 'W');
+  --CP;
+  assert( *CP == 'o');
+  CP.fin(); --CP;
+  assert( *CP == 'W');
+  CP.debut();
+  assert( *CP == 'e');
+  std::cout<< "Curseur Pas:\t OK" << std::endl;
 
 
   return 0;
