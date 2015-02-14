@@ -20,7 +20,7 @@ namespace enseirb{
   }
 
   bool CurseurInverse::fini(){
-    if( _position == _chaine.taille())
+    if( _position == 0)
       return true;
     else 
       return false;
