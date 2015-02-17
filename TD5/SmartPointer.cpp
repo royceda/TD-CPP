@@ -20,9 +20,7 @@ namespace enseirb{
   SmartPointer::~SmartPointer(){releasePointer();}
   
   int *SmartPointer::operator->(){return data;}
-  
-  const int *SmartPointer::operator->()const {return data;}
-  
+  const int *SmartPointer::operator->()const {return data;}  
   int &SmartPointer::operator*(){return *data;}
   const int &SmartPointer::operator*()const{return *data;}
   
@@ -35,7 +33,7 @@ namespace enseirb{
     return *this;
   }
   
-  const SmartPointer &SmartPointer::operator=(int *data){
+  const SmartPointer &SmartPointer::operator=(DataType *data){
     releasePointer();
     counter=new int(1);
     this->data=data;

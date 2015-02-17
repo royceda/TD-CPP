@@ -13,12 +13,13 @@ namespace enseirb{
     
     void releasePointer(){
       *counter = *counter-1;
-      if (*counter==0)
+      if (*counter == 0)
 	{
 	  delete counter;
+	  
 	  delete data;
 	}
-      counter=NULL;
+      counter = NULL;
     }
     
   public:
@@ -60,8 +61,8 @@ namespace enseirb{
 
     const SmartPointer &operator=(DataType *data){
       releasePointer();
-      counter=new int(1);
-      this->data=data;
+      counter = new int(1);
+      this->data = data;
       return *this;
     }
 

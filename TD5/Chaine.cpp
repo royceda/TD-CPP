@@ -14,9 +14,11 @@ static char *dupliquer(const char* src, int taille) {
   return tmp;
 }
 
+
 void Chaine::release(){
-  if (_donnees!=NULL) delete [] _donnees;
-  _donnees=NULL;
+  /*if (_donnees != NULL)
+    delete _donnees;
+    _donnees = NULL;*/
 }
 
 Chaine::Chaine() : _taille(0), _donnees(NULL) {

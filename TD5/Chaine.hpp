@@ -1,6 +1,9 @@
 #ifndef CHAINE_HPP
 #define CHAINE_HPP
 
+#include "SmartPointer.hpp"
+
+
 class Chaine {
 private:
   unsigned int _taille;
