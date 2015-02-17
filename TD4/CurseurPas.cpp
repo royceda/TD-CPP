@@ -1,6 +1,5 @@
 #include "CurseurPas.hpp"
 
-
 namespace enseirb{
 
   CurseurPas::CurseurPas(Chaine &a, int b, int e, int p):
