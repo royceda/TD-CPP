@@ -21,7 +21,12 @@ void f(const char *p){
 void testChaine(){
 
   Chaine c("Hello World");
-  
+
+for(int i =0; i < c.taille(); ++i)
+  printf("%c\t", c[i]);
+
+printf("\n \n");
+
 }
 
 void test(){
@@ -47,9 +52,9 @@ SmartPointer aa("azaza");
   std::strcpy(r.get(), "encore");
   q = r;
 
-  //q = "moi"; // probleme
+//q = "moi"; // probleme
 
-  //const SmartPointer s(r);
+  const SmartPointer s(r);
   //f(s);
 
 
@@ -59,7 +64,7 @@ SmartPointer aa("azaza");
 int main(){
 
  
-test();
+//test();
 testChaine();
 
 }

@@ -1,5 +1,5 @@
 CC = g++
-CPPFLAGS = -Wall -Wextra -std=c++0x
+CPPFLAGS = -Wall -Wextra -std=c++0x -g
 
 all: SmartExample
 

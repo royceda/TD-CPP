@@ -42,7 +42,12 @@ namespace enseirb {
   SmartPointer::SmartPointer(char *data): _data(data), _counter(new int(1)) {
     TRACE(__func__ << "(char*) " << _data << std::endl);
   }
-  
+
+
+  SmartPointer::SmartPointer(const char *data): _data((char*) data), _counter(new int(1)) {
+    TRACE(__func__ << "(char*) " << _data << std::endl);
+  }
+
   SmartPointer::SmartPointer(const SmartPointer &p) : 
     _data(p._data), _counter(p._counter) {
     *_counter = *_counter + 1;
