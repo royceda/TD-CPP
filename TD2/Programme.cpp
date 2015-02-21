@@ -53,6 +53,8 @@ int main() {
     printf("%c ",s1[i]);
   printf("\n");
 
+  printf("%s\n", (const char*)s3);
+
   
   return 0;
 }

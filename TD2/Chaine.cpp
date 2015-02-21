@@ -86,7 +86,7 @@ const Chaine Chaine::operator+(const Chaine& s){
 }
 
 
-char* Chaine::operator char*() const{
+Chaine::operator const char*() const{
 
   return _donnees;
 }

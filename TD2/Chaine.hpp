@@ -23,7 +23,7 @@ class Chaine {
   //char operator[](unsigned int index);
   char& operator[](unsigned int index);
   const Chaine operator+(const Chaine&);
-  char* operator char*() const;
+  operator const char*() const;
 };
 
 #endif
