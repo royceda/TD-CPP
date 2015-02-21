@@ -14,7 +14,7 @@ namespace enseirb{
   public:
     SmartPointer();
     
-    SmartPointer(char *data);
+    SmartPointer( char *data);
     
     SmartPointer(const SmartPointer &p);
 
@@ -24,6 +24,7 @@ namespace enseirb{
     char &operator*();
     const char *operator->()const ;
     const char &operator*()const;
+
 
     const SmartPointer &operator=(const SmartPointer &p);
 

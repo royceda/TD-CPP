@@ -1,18 +1,16 @@
 CC = g++
 CPPFLAGS = -Wall -Wextra -std=c++0x
 
-all: test  SmartExample
+all: SmartExample
 
 Chaine.o: Chaine.hpp
-
-EleveVacataire.o:  EleveVacataire.hpp	
 
 SmartExample.o: SmartPointer.hpp 
 
 SmartPointer.o: SmartPointer.hpp 
 
 
-SmartExample: SmartExample.o SmartPointer.o
+SmartExample: SmartExample.o SmartPointer.o Chaine.o
 	$(CC) $^ -o $@
 
 clean:

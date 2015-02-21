@@ -4,6 +4,10 @@
 #include<cstdio>
 #include<cstring>
 
+using enseirb::Chaine;
+using enseirb::SmartPointer;
+
+
 
 
 
@@ -11,9 +15,18 @@ void f(const char *p){
   std::printf("%s\n",p);
 }
 
-int main(){
-  using enseirb::SmartPointer;
-  SmartPointer p(new char[10]);
+
+
+
+void testChaine(){
+
+  Chaine c("Hello World");
+  
+}
+
+void test(){
+ SmartPointer p(new char[10]);
+SmartPointer aa("azaza");
 
   std::strcpy(p, "coucou");
 
@@ -36,6 +49,17 @@ int main(){
 
   //q = "moi"; // probleme
 
-  const SmartPointer s(r);
-  f(s);
+  //const SmartPointer s(r);
+  //f(s);
+
+
+}
+
+
+int main(){
+
+ 
+test();
+testChaine();
+
 }

@@ -1,11 +1,13 @@
 #ifndef CHAINE_HPP
 #define CHAINE_HPP
 
+#include "SmartPointer.hpp"
+
 namespace enseirb {
 
   class Chaine {
   private:
-    smartPointer char* _donnees;
+    SmartPointer _donnees;
     unsigned int _taille;
 
   public:
