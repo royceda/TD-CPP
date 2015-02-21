@@ -14,7 +14,7 @@ namespace enseirb{
   public:
     SmartPointer();
     
-    SmartPointer(const char *data);
+    SmartPointer(char *data);
     
     SmartPointer(const SmartPointer &p);
 

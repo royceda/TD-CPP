@@ -36,10 +36,10 @@ namespace enseirb {
   
 
   SmartPointer::SmartPointer(): _counter(new int(0)){
-    char *_donnees = new char[0];
+    _data = new char[0];
   }
 
-  SmartPointer::SmartPointer(const char *data): _data(data), _counter(new int(1)) {
+  SmartPointer::SmartPointer(char *data): _data(data), _counter(new int(1)) {
     TRACE(__func__ << "(char*) " << _data << std::endl);
   }
   

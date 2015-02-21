@@ -1,7 +1,11 @@
-#include"SmartPointer.hpp"
+#include "SmartPointer.hpp"
+#include "Chaine.hpp"
 
 #include<cstdio>
 #include<cstring>
+
+
+
 
 void f(const char *p){
   std::printf("%s\n",p);
