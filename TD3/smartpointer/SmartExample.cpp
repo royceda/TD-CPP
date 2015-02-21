@@ -31,7 +31,7 @@ printf("\n \n");
 
 void test(){
  SmartPointer p(new char[10]);
-SmartPointer aa("azaza");
+//SmartPointer aa("azaza");
 
   std::strcpy(p, "coucou");
 
@@ -64,7 +64,7 @@ SmartPointer aa("azaza");
 int main(){
 
  
-//test();
+test();
 testChaine();
 
 }
