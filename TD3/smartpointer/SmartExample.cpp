@@ -5,6 +5,8 @@
 #include<cstring>
 
 
+
+
 void f(const char *p){
   std::printf("%s\n",p);
 }
